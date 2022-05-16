@@ -14901,7 +14901,7 @@ keyboard.inline_keyboard = {
 {text = '𝗬𝗢𝗭𝗥𝗔𝗧 𝗦𝗘𝗭𝗥 ⚡️', url = "https://t.me/U_SEZR"}
 },
 {
-{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'}
+{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'},
 },
 {
 {text = 'اضف البوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -14920,12 +14920,11 @@ data = {
 {text = '𝗬𝗢𝗭𝗥𝗔𝗧 𝗦𝗘𝗭𝗥 ⚡️', url = "https://t.me/U_SEZR"}
 },
 {
-{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'}
+{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'},
 },
 {
 {text = 'اضف البوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
-}
 }
 return LuaTele.sendText(msg_chat_id,msg_id,Redis:get(Saidi.."Start:Bot"),"md",false, false, false, false, reply_markup)
 end
