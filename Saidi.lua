@@ -14901,12 +14901,11 @@ keyboard.inline_keyboard = {
 {text = '𝗬𝗢𝗭𝗥𝗔𝗧 𝗦𝗘𝗭𝗥 ⚡️', url = "https://t.me/U_SEZR"}
 },
 {
-{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'}, 
+{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'}
 },
 {
 {text = 'اضف البوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
-}
 }
 local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&caption=".. URL.escape(CmdStart).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -14921,7 +14920,7 @@ data = {
 {text = '𝗬𝗢𝗭𝗥𝗔𝗧 𝗦𝗘𝗭𝗥 ⚡️', url = "https://t.me/U_SEZR"}
 },
 {
-{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'}, 
+{text = '𓄼• قـنـاه الـسـورس •𓄹', url = 't.me/RBBOU'}
 },
 {
 {text = 'اضف البوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
