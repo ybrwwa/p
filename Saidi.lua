@@ -12318,25 +12318,92 @@ local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {
 return LuaTele.sendText(msg_chat_id,msg_id,Redis:get(Saidi.."Start:Bot"),"md",false, false, false, false, reply_markup)
 end
 else
-if text == '/SEZR' or text == "رجـوع ⋆" then
+if text == '/SEZR' then
 Redis:sadd(Saidi..'Num:User:Pv',msg.sender.user_id)  
-if not msg.Devss then
+if not msg.DevelopersQ then
 if not Redis:get(Saidi.."Start:Bot") then
-local CmdStart = '\n⋄︙مرحبا انا بوت '..(Redis:get(Saidi.."Name:Bot") or "جولد")..
-'\n⋄︙اختصاصي حمايه المجموعات'..
-'\n⋄︙كما احتوي ايضا علي مميزات خدميه'..
-'\n⋄︙للتفعيل اضفني مشرف في مجموعتك'..
-'\n⋄︙وبعدها قم بكتابه كلمه تفعيل'..''
-local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,data = {
-{{text = 'البوت ⋆',type = 'text'}, },
-{{text = 'التفعيل والتعطيل ⋆',type = 'text'},{text = 'الاحصائيات ⋆',type = 'text'}, },
-{{text = 'الاذاعه ⋆',type = 'text'},},
-{{text = 'الاشتراك الاجباري ⋆',type = 'text'},},
-{{text = 'المطورين ⋆',type = 'text'},{text = 'العام ⋆',type = 'text'},},
-{{text = 'تحديث الملفات ⋆',type = 'text'}, },}}
-return LuaTele.sendText(msg_chat_id,msg_id,'⋆ ︙مرحبا عزيزي المطور \n⋆ ︙انت المطور الاساسي هنا \n⋆ ︙اليك ازرار سورس جولد \n⋆ ︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه', 'md', false, false, false, false, reply_markup)
+local CmdStart = '*ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n🎤╖ أهلآ بك عزيزي أنا بوت '..(Redis:get(Saidi.."Name:Bot") or "ريبورتر")..
+'\n ⚙️╢ وظيفتي حماية المجموعات'..
+'\n ✅╢ لتفعيل البوت عليك اتباع مايلي '..
+'\n 🔘╢ أضِف البوت إلى مجموعتك'..
+'\n ⚡️╢ ارفعهُ » مشرف'..
+'\n ⬆️╢ سيتم ترقيتك مالك في البوت'..
+'\n 🎌╜ ارسل كلمة تفعيل ليتم تفعيل المجموعه'..
+'\n ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ'..
+'\n ✵ مطور البوت -›〘 @'..UserSudo..' 〙*'
+local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
+data = {
+{
+{text = 'المطور سيزر',type = 'text'},{text = 'المطور عسليه', type = 'text'},
+},
+{
+{text = 'قناة السورس',type = 'text'},{text = 'جروب الدعم', type = 'text'},
+},
+{
+{text = 'سورس',type = 'text'},{text = 'المطور', type = 'text'},
+},
+{
+{text = '𖤍•──∴ ِ𝖱ٌeٓٓBoِٰ𝖱tٌِeِ𝖱 ∴──•𖤍',type = 'text'},
+},
+{
+{text = 'غنيلي',type = 'text'},{text = 'استوري', type = 'text'},
+},
+{
+{text = 'رتبتي',type = 'text'},{text = 'ايدي', type = 'text'},
+},
+{
+{text = 'لو خيروك',type = 'text'},{text = 'حروف', type = 'text'},
+},
+{
+{text = 'نكته',type = 'text'},{text = 'اذكار', type = 'text'},
+},
+{
+{text = 'تويت',type = 'text'},{text = 'كتبات', type = 'text'},
+},
+{
+{text = 'أضغط لاضافه ألبوت لمجموعتك 𖠪', url = 't.me/'..UserBot..'?startgroup=new'}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id,CmdStart,"md",false, false, false, false, reply_markup)
+else
+local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
+data = {
+{
+{text = 'المطور سيزر',type = 'text'},{text = 'المطور عسليه', type = 'text'},
+},
+{
+{text = 'قناة السورس',type = 'text'},{text = 'جروب الدعم', type = 'text'},
+},
+{
+{text = 'سورس',type = 'text'},{text = 'المطور', type = 'text'},
+},
+{
+{text = '𖤍•──∴ ِ𝖱ٌeٓٓBoِٰ𝖱tٌِeِ𝖱 ∴──•𖤍',type = 'text'},
+},
+{
+{text = 'غنيلي',type = 'text'},{text = 'استوري', type = 'text'},
+},
+{
+{text = 'رتبتي',type = 'text'},{text = 'ايدي', type = 'text'},
+},
+{
+{text = 'لو خيروك',type = 'text'},{text = 'حروف', type = 'text'},
+},
+{
+{text = 'نكته',type = 'text'},{text = 'اذكار', type = 'text'},
+},
+{
+{text = 'تويت',type = 'text'},{text = 'كتبات', type = 'text'},
+},
+{
+{text = 'أضغط لاضافه ألبوت لمجموعتك 𖠪', url = 't.me/'..UserBot..'?startgroup=new'}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id,Redis:get(Saidi.."Start:Bot"),"md",false, false, false, false, reply_markup)
 end
-end
+else
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,data = {
 {{text = 'البوت ⋆',type = 'text'}, },
 {{text = 'التفعيل والتعطيل ⋆',type = 'text'},{text = 'الاحصائيات ⋆',type = 'text'}, },
